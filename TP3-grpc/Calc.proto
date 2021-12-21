@@ -1,0 +1,22 @@
+syntax = "proto3" ; 
+package todoPackage;
+service Calc{
+  rpc Add(noparams) returns (result);
+  rpc Soustraction(noparams) returns (result);
+  rpc Multi(noparams) returns (result);
+  rpc Div(noparams) returns (result);
+  
+  }
+  
+  message noparams { 
+          int32 x = 1; 
+		  int32 y = 2 ;}
+  
+  message result{
+          int32 res=1; 
+          string err=0;
+		  
+		  }
+
+  
+		  
